@@ -1,12 +1,650 @@
 <!DOCTYPE html>
-<html lang="sv">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Solsystem</title>
-</head>
-<body>
-    <h1>kaka</h1>
-</body>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Solar System</title>
+        <!-- Jquery (for preload) import -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <!-- Css import -->
+        <link rel="stylesheet" href="css/main.css">
+        <!-- <link rel="stylesheet" href="css/preload.css">     -->
+        <!-- Fonts import -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+        <!-- Swiper, free to use service, importing -->
+        <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
+        <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+        <!-- ionicons, free icon service -->
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    </head>
+    <body>
+        <!-- <div class="loader">
+            <div class="pulse"></div>
+        </div> -->
+        <div id="kingdom">
+            <nav>
+                <h1 class="logo">Pelle Corp</h1>
+                <button class="hamburger" id="hamburger">
+                    <ion-icon name="menu-outline"></ion-icon>
+                </button>
+                <ul id="navbar">
+                    <li><a href="">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="https://github.com/indra0120/projekt">Github</a></li>
+                    <li><a href="https://docs.google.com/document/d/1xCqpqwL924qDwyDh38nKlyc6bH-aES5fNG39B1e9bpE/edit?usp=sharing">Documentation</a></li>
+                    <li><a href="mailto:omar.benmessoud@edu.nykoping.se">Contact Us</a></li>
+                </ul>
+            </nav>
+            <section class="container">
+                <div class="card">
+                    <div class="card-image sun"></div>
+                    <h2>The Sun</h2>
+                    <p>The Sun is the largest and most massive object in our solar system, making it the center of orbit for all other celestial bodies.</p>
+                    <a href="#sunInfo">Read More</a>
+                </div>
+                <div class="card">
+                    <div class="card-image mercury"></div>
+                    <h2>Mercury</h2>
+                    <p>It's small, it's hot and it's shrinking!<br><br><br><br></p>
+                    <a href="#mercInfo">Read More</a>
+                </div>
+                <div class="card">
+                    <div class="card-image venus"></div>
+                    <h2>Venus</h2>
+                    <p>If we look at its past, we see our present, if we look at its present, we may see our future.<br><br></p>
+                    <a href="#venInfo">Read More</a>
+                </div>
+                <div class="card">
+                    <div class="card-image earth"></div>
+                    <h2>Earth</h2>
+                    <p>It's not flat, and it's not a sphere. It's a spheroid.<br><br><br><br></p>
+                    <a href="#earthInfo">Read More</a>
+                </div>
+                <div class="card">
+                    <div class="card-image mars"></div>
+                    <h2>Mars</h2>
+                    <p>A mad scientist once said we would walk there in 4 years.<br><br><br><br></p>
+                    <a href="#marsInfo">Read More</a>
+                </div>
+                <div class="card">
+                    <div class="card-image jupiter"></div>
+                    <h2>Jupiter</h2>
+                    <p>It's big, it's soft and it's the most attractive!<br><br><br><br></p>
+                    <a href="#jupInfo">Read More</a>
+                </div>
+                <div class="card">
+                    <div class="card-image saturn"></div>
+                    <h2>Saturn</h2>
+                    <p>One Ring to rule them all, One Ring to find them, One Ring to bring them all and in the darkness bind them.<br><br></p>
+                    <a href="#satInfo">Read More</a>
+                </div>
+                <div class="card">
+                    <div class="card-image uranus"></div>
+                    <h2>Uranus</h2>
+                    <p>"'Cause being mainstream is kinda cringe."<br><br><br><br></p>
+                    <a href="#urInfo">Read More</a>
+                </div>
+                <div class="card">
+                    <div class="card-image neptune"></div>
+                    <h2>Neptune</h2>
+                    <p>When they named it, they still didn't know that this planet was also the god of winds, hosting supersonic winds.<br><br></p>
+                    <a href="#nepInfo">Read More</a>
+                </div>
+            </section>
+            <div id="sunInfo">
+                <div class="blog-slider">
+                    <div class="blog-slider__wrp swiper-wrapper">
+                    <div class="blog-slider__item swiper-slide">
+                        <div class="blog-slider__img">
+                        <!-- Bild av PublicDomainPictures från Pixabay  -->
+                        <img src="./images/sun-1.jpg" alt="">
+                        </div>
+                        <div class="blog-slider__content">
+                        <span class="blog-slider__code">The Star of the Solar System</span>
+                        <div class="blog-slider__title">The Sun</div>
+                        <div class="blog-slider__text">
+                            The Sun is the star of the Solar System, made up of gaseous matter that gives off light and heat and around which the eight main planets 
+                            (Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus and Neptune), the dwarf planets, the satellites and innumerable 
+                            minor bodies rotate. The mass of the Sun is almost 323,000 times larger than the Earth and its gravity is 28 times that of the Earth. 
+                            It is a giant sphere of hydrogen and helium that draws energy from the nuclear reactions that take place in its nucleus, where hydrogen atoms 
+                            fuse to form heavier atoms, like helium.
+                        </div>
+                        </div>
+                    </div>
+                    <div class="blog-slider__item swiper-slide">
+                        <div class="blog-slider__img">
+                        <!-- BIld av Daniel Roberts från Pixabay  -->
+                        <img src="./images/sun-2.jpg" alt="">
+                        </div>
+                        <div class="blog-slider__content">
+                        <span class="blog-slider__code">The Star of the Solar System</span>
+                        <div class="blog-slider__title">Characteristics</div>
+                        <div class="blog-slider__text">
+                            <dl>
+                                <dt>Age</dt>
+                                <dd>4.5 billion years</dd>
+                            </dl>
+                            <dl>
+                                <dt>Star Type</dt>
+                                <dd>G2 V, Yellow Dwarf</dd>
+                            </dl>
+                            <dl>
+                                <dt>Mass</dt>
+                                <dd>1.9885×10<sup>30</sup> kg</dd>
+                            </dl>
+                            <dl>
+                                <dt>Radius</dt>
+                                <dd>695 700km</dd>
+                            </dl>
+                            <dl>
+                                <dt>Surface Temperature</dt>
+                                <dd>5 500°C</dd>
+                            </dl>
+                            <dl>
+                                <dt>Distance from Earth</dt>
+                                <dd>1 AU (≈ 150 million km)</dd>
+                            </dl>
+                        </div>
+                        </div>
+                    </div>
+                    </div>
+                    <div class="blog-slider__pagination"></div>
+                    <a href="#" class="closeButton">&times;</a>
+                </div>
+            </div>
+            <div id="mercInfo">
+                <div class="blog-slider">
+                    <div class="blog-slider__wrp swiper-wrapper">
+                    <div class="blog-slider__item swiper-slide">
+                        <div class="blog-slider__img">
+                        <!-- Bild av jkdvmim från Pixabay  -->
+                        <img src="./images/mercury-1.jpg" alt="">
+                        </div>
+                        <div class="blog-slider__content">
+                        <span class="blog-slider__code">The Messenger of the Sun</span>
+                        <div class="blog-slider__title">Mercury</div>
+                        <div class="blog-slider__text">
+                            Mercury is the smallest and closest to the Sun: its surface experiences the greatest thermal excursion among all the planets, 
+                            with temperatures in the equatorial regions reaching 427 ° C during the day and reaching -173 ° C at night.
+                            Despite its great resemblance to the Moon, Mercury is much denser: in fact according to astronomers it is composed 
+                            of a large iron core, part of which perhaps in a liquid state, with a radius of 1,800-1,900 km, which contains about 
+                            80% of the mass of the planet.
+                        </div>
+                        </div>
+                    </div>
+                    <div class="blog-slider__item swiper-slide">
+                        <div class="blog-slider__img">
+                        <!-- Bild av TheSpaceway från Pixabay  -->
+                        <img src="./images/mercury-2.jpg" alt="">
+                        </div>
+                        <div class="blog-slider__content">
+                        <span class="blog-slider__code">The Messenger of the Sun</span>
+                        <div class="blog-slider__title">Characteristics</div>
+                        <div class="blog-slider__text">
+                            <dl>
+                                <dt>Planet Type</dt>
+                                <dd>Rocky Planet</dd>
+                            </dl>
+                            <dl>
+                                <dt>Mass</dt>
+                                <dd>3.285×10<sup>23</sup> kg</dd>
+                            </dl>
+                            <dl>
+                                <dt>Radius</dt>
+                                <dd>2 439.7 km</dd>
+                            </dl>
+                            <dl>
+                                <dt>Density</dt>
+                                <dd>5 427 kg/m<sup>3</sup></dd>
+                            </dl>
+                            <dl>
+                                <dt>Surface Gravity</dt>
+                                <dd>3.7 m/s<sup>2</sup></dd>
+                            </dl>
+                            <dl>
+                                <dt>Distance from Sun</dt>
+                                <dd>57.91 million km</dd>
+                            </dl>
+                        </div>
+                        </div>
+                    </div>
+                    </div>
+                    <div class="blog-slider__pagination"></div>
+                    <a href="#" class="closeButton">&times;</a>
+                </div>
+            </div>
+            <div id="venInfo">
+                <div class="blog-slider">
+                    <div class="blog-slider__wrp swiper-wrapper">
+                    <div class="blog-slider__item swiper-slide">
+                        <div class="blog-slider__img">
+                        <!-- Bild av WikiImages från Pixabay  -->
+                        <img src="./images/venus-1.jpg" alt="">
+                        </div>
+                        <div class="blog-slider__content">
+                        <span class="blog-slider__code">Earth's Attractive Evil Twin</span>
+                        <div class="blog-slider__title">Venus</div>
+                        <div class="blog-slider__text">
+                            The planet Venus has been known since prehistoric times because it is very bright and perhaps because of its splendor 
+                            it took its name from the goddess of love and beauty. It can be easily seen with the naked eye: at its peak it is 12 times brighter
+                            than Sirius, the brightest star in our sky. The reason it is so bright is due to the dense atmosphere, rich in carbon dioxide, 
+                            that reflects the sun's rays very well. Always linked to this, the ground temperature is also higher than that of Mercury, 
+                            despite being further away from the Sun.
+                        </div>
+                        </div>
+                    </div>
+                    <div class="blog-slider__item swiper-slide">
+                        <div class="blog-slider__img">
+                        <!-- Bild av Nasa: https://solarsystem.nasa.gov/internal_resources/4319/ -->
+                        <img src="./images/venus.jpg" alt="">
+                        </div>
+                        <div class="blog-slider__content">
+                        <span class="blog-slider__code">Earth's Attractive Evil Twin</span>
+                        <div class="blog-slider__title">Characteristics</div>
+                        <div class="blog-slider__text">
+                            <dl>
+                                <dt>Planet Type</dt>
+                                <dd>Rocky Planet</dd>
+                            </dl>
+                            <dl>
+                                <dt>Mass</dt>
+                                <dd>4.8675×10<sup>24</sup> kg</dd>
+                            </dl>
+                            <dl>
+                                <dt>Radius</dt>
+                                <dd>6 051.8 km</dd>
+                            </dl>
+                            <dl>
+                                <dt>Density</dt>
+                                <dd>5 243 kg/m<sup>3</sup></dd>
+                            </dl>
+                            <dl>
+                                <dt>Surface Gravity</dt>
+                                <dd>8.87 m/s<sup>2</sup></dd>
+                            </dl>
+                            <dl>
+                                <dt>Distance from Sun</dt>
+                                <dd>108.92 million km</dd>
+                            </dl>
+                        </div>
+                        </div>
+                    </div>
+                    </div>
+                    <div class="blog-slider__pagination"></div>
+                    <a href="#" class="closeButton">&times;</a>
+                </div>
+            </div>
+            <div id="earthInfo">
+                <div class="blog-slider">
+                    <div class="blog-slider__wrp swiper-wrapper">
+                    <div class="blog-slider__item swiper-slide">
+                        <div class="blog-slider__img">
+                            <!-- By User:Bibi Saint-Pol, own work, 2007-02-08, Public Domain, https://commons.wikimedia.org/w/index.php?curid=1804754 -->
+                        <img src="./images/earth-1.jpg" alt="">
+                        </div>
+                        <div class="blog-slider__content">
+                        <span class="blog-slider__code">The Blue Planet</span>
+                        <div class="blog-slider__title">Earth</div>
+                        <div class="blog-slider__text">
+                            To our knowledge, the Earth appears to be the only planet that hosts forms of life as we understand it, based on carbon. 
+                            This is thanks to its particular characteristics, such as the atmospheric composition and the specific distance from the Sun. 
+                            These characteristics make Earth the only planet capable of sustaining liquid surface water. About 71% of Earth's Surface is made up of water.
+                            It is the first planet in the solar system to host a natural satellite: the Moon.
+                        </div>
+                        </div>
+                    </div>
+                    <div class="blog-slider__item swiper-slide">
+                        <div class="blog-slider__img">
+                        <!-- Bild av PIRO4D från Pixabay  -->
+                        <img src="./images/earth-2.jpg" alt="">
+                        </div>
+                        <div class="blog-slider__content">
+                        <span class="blog-slider__code">The Blue Planet</span>
+                        <div class="blog-slider__title">Characteristics</div>
+                        <div class="blog-slider__text">
+                            <dl>
+                                <dt>Planet Type</dt>
+                                <dd>Rocky Planet</dd>
+                            </dl>
+                            <dl>
+                                <dt>Mass</dt>
+                                <dd>5.97237×10<sup>24</sup> kg</dd>
+                            </dl>
+                            <dl>
+                                <dt>Radius</dt>
+                                <dd>6 371 km</dd>
+                            </dl>
+                            <dl>
+                                <dt>Density</dt>
+                                <dd>5 514 kg/m<sup>3</sup></dd>
+                            </dl>
+                            <dl>
+                                <dt>Surface Gravity</dt>
+                                <dd>9.81 m/s<sup>2</sup></dd>
+                            </dl>
+                            <dl>
+                                <dt>Distance from Sun</dt>
+                                <dd>1 AU (≈ 150 million km)</dd>
+                            </dl>
+                        </div>
+                        </div>
+                    </div>
+                    </div>
+                    <div class="blog-slider__pagination"></div>
+                    <a href="#" class="closeButton">&times;</a>
+                </div>
+            </div>
+            <div id="marsInfo">
+                <div class="blog-slider">
+                    <div class="blog-slider__wrp swiper-wrapper">
+                    <div class="blog-slider__item swiper-slide">
+                        <div class="blog-slider__img">
+                        <!-- Mars and Rhea Silvia - Pieter Paul Rubens, 1617 -->
+                        <img src="./images/mars-1.jpg" alt="">
+                        </div>
+                        <div class="blog-slider__content">
+                        <span class="blog-slider__code">The Red Planet</span>
+                        <div class="blog-slider__title">Mars</div>
+                        <div class="blog-slider__text">
+                            Mars is called the "red planet" due to the presence of iron oxides, which create an atmosphere characterized by 
+                            dust storms of that color. Associating that scarlet color with blood, the Romans named it after their God of War, Mars. 
+                            In truth the Romans copied the greeks, who in their turn named the planet after their God of War, Ares. 
+                            Here is Mount Olympus, a gigantic volcano 27 km high, the highest in the Solar System. Mars has two satellites, Phobos and Deimos.
+                        </div>
+                        </div>
+                    </div>
+                    <div class="blog-slider__item swiper-slide">
+                        <div class="blog-slider__img">
+                        <!-- Bild av Nasa, Perseverance 4 March 2020, https://www.nasa.gov/press-release/nasa-s-perseverance-drives-on-mars-terrain-for-first-time -->
+                        <img src="./images/mars-2.jpg" alt="">
+                        </div>
+                        <div class="blog-slider__content">
+                        <span class="blog-slider__code">The Red Planet</span>
+                        <div class="blog-slider__title">Characteristics</div>
+                        <div class="blog-slider__text">
+                            <dl>
+                                <dt>Planet Type</dt>
+                                <dd>Rocky Planet</dd>
+                            </dl>
+                            <dl>
+                                <dt>Mass</dt>
+                                <dd>6.4171×10<sup>24</sup> kg</dd>
+                            </dl>
+                            <dl>
+                                <dt>Radius</dt>
+                                <dd>3 389.5 km</dd>
+                            </dl>
+                            <dl>
+                                <dt>Density</dt>
+                                <dd>3 933.5 kg/m<sup>3</sup></dd>
+                            </dl>
+                            <dl>
+                                <dt>Surface Gravity</dt>
+                                <dd>3.72 m/s<sup>2</sup></dd>
+                            </dl>
+                            <dl>
+                                <dt>Distance from Sun</dt>
+                                <dd>208.71 million km</dd>
+                            </dl>
+                        </div>
+                        </div>
+                    </div>
+                    </div>
+                    <div class="blog-slider__pagination"></div>
+                    <a href="#" class="closeButton">&times;</a>
+                </div>
+            </div>
+            <div id="jupInfo">
+                <div class="blog-slider">
+                    <div class="blog-slider__wrp swiper-wrapper">
+                    <div class="blog-slider__item swiper-slide">
+                        <div class="blog-slider__img">
+                        <img src="./images/jupiter-1.jpg" alt="">
+                        </div>
+                        <div class="blog-slider__content">
+                        <span class="blog-slider__code">The King of the Solar System</span>
+                        <div class="blog-slider__title">Jupiter</div>
+                        <div class="blog-slider__text">
+                            Jupiter is so large that if it had had an even higher mass (at least 90 times) it would have presented the favorable 
+                            conditions to initiate nuclear reactions within it, becoming a star. At sight it presents "bands", corresponding to areas 
+                            of the atmosphere, composed mainly of hydrogen and helium, with different rotation speeds and compositions. 
+                            Jupiter has the great red spot, which is a huge cyclone that persists in a certain area of the atmosphere. 
+                            It has many moons, currently there are at least 67, including the 4 Medicean satellites Io, Europa, Ganymede and Callisto, 
+                            discovered by Galileo.
+                        </div>
+                        </div>
+                    </div>
+                    <div class="blog-slider__item swiper-slide">
+                        <div class="blog-slider__img">
+                        <!-- Bild av Nasa, Juno 17 February 2020, https://www.nasa.gov/image-feature/jpl/massive-beauty -->
+                        <img src="./images/jupiter-2.jpg" alt="">
+                        </div>
+                        <div class="blog-slider__content">
+                        <span class="blog-slider__code">The King of the Solar System</span>
+                        <div class="blog-slider__title">Characteristics</div>
+                        <div class="blog-slider__text">
+                            <dl>
+                                <dt>Planet Type</dt>
+                                <dd>Gas Giant</dd>
+                            </dl>
+                            <dl>
+                                <dt>Mass</dt>
+                                <dd>1.8982×10<sup>27</sup> kg</dd>
+                            </dl>
+                            <dl>
+                                <dt>Radius</dt>
+                                <dd>69 911 km</dd>
+                            </dl>
+                            <dl>
+                                <dt>Density</dt>
+                                <dd>1 326 kg/m<sup>3</sup></dd>
+                            </dl>
+                            <dl>
+                                <dt>Surface Gravity</dt>
+                                <dd>24.79 m/s<sup>2</sup></dd>
+                            </dl>
+                            <dl>
+                                <dt>Distance from Sun</dt>
+                                <dd>778 million km</dd>
+                            </dl>
+                        </div>
+                        </div>
+                    </div>
+                    </div>
+                    <div class="blog-slider__pagination"></div>
+                    <a href="#" class="closeButton">&times;</a>
+                </div>
+            </div>
+            <div id="satInfo">
+                <div class="blog-slider">
+                    <div class="blog-slider__wrp swiper-wrapper">
+                    <div class="blog-slider__item swiper-slide">
+                        <div class="blog-slider__img">
+                        <img src="./images/saturn-1.jpg" alt="">
+                        </div>
+                        <div class="blog-slider__content">
+                        <span class="blog-slider__code">The True Lord of the Rings</span>
+                        <div class="blog-slider__title">Saturn</div>
+                        <div class="blog-slider__text">
+                            It was Galileo Galilei who noticed the strange shape of the Gas Giant for the first time in 1610. During the first observations, 
+                            the astronomer from Pisa was unable to completely reconstruct the figure of the planet due to its rings, defining it as 
+                            composed of three bodies. However, the discovery of something is not usually related to a single individual: it was 
+                            Eustachio Divini, in 1649, who showed everyone for the first time a detailed illustration of Saturn's rings and later 
+                            Christiaan Huygens, in 1655, was the the first to guess the annular shape of the bodies seen by Galileo around the planet.
+                        </div>
+                        </div>
+                    </div>
+                    <div class="blog-slider__item swiper-slide">
+                        <div class="blog-slider__img">
+                        <img src="./images/saturn-2.jpg" alt="">
+                        </div>
+                        <div class="blog-slider__content">
+                        <span class="blog-slider__code">The True Lord of the Rings</span>
+                        <div class="blog-slider__title">Characteristics</div>
+                        <div class="blog-slider__text">
+                            <dl>
+                                <dt>Planet Type</dt>
+                                <dd>Gas Giant</dd>
+                            </dl>
+                            <dl>
+                                <dt>Mass</dt>
+                                <dd>5.6834×10<sup>26</sup> kg</dd>
+                            </dl>
+                            <dl>
+                                <dt>Radius</dt>
+                                <dd>58 232 km</dd>
+                            </dl>
+                            <dl>
+                                <dt>Density</dt>
+                                <dd>687 kg/m<sup>3</sup></dd>
+                            </dl>
+                            <dl>
+                                <dt>Surface Gravity</dt>
+                                <dd>10.44 m/s<sup>2</sup></dd>
+                            </dl>
+                            <dl>
+                                <dt>Distance from Sun</dt>
+                                <dd>1.477 billion km</dd>
+                            </dl>
+                        </div>
+                        </div>
+                    </div>
+                    </div>
+                    <div class="blog-slider__pagination"></div>
+                    <a href="#" class="closeButton">&times;</a>
+                </div>
+            </div>
+            <div id="urInfo">
+                <div class="blog-slider">
+                    <div class="blog-slider__wrp swiper-wrapper">
+                    <div class="blog-slider__item swiper-slide">
+                        <div class="blog-slider__img">
+                            <!-- By User:Bibi Saint-Pol, own work, 2007-02-08, Public Domain, https://commons.wikimedia.org/w/index.php?curid=1804754 -->
+                        <img src="./images/earth-1.jpg" alt="">
+                        </div>
+                        <div class="blog-slider__content">
+                        <span class="blog-slider__code">The Bull's Eye Planet</span>
+                        <div class="blog-slider__title">Uranus</div>
+                        <div class="blog-slider__text">
+                            Uranus is not observable with the naked eye. First planet "seen" through a telescope, it was discovered only on March 13, 1781 
+                            by William Herschel. It is large in size (51,118 km in equatorial diameter). It has the peculiarity of having an axis of 
+                            rotation almost parallel to the plane of the orbit, as the axial inclination is about 98 °. In addition to a series of rings, 
+                            Uranus has 27 moons, named after characters from Shakespeare and Pope. The most interesting part is that its moons and rings 
+                            also rotate vertically in the orbital plane. The temperature of its atmosphere reaches -224 ° C.
+                        </div>
+                        </div>
+                    </div>
+                    <div class="blog-slider__item swiper-slide">
+                        <div class="blog-slider__img">
+                        <!-- Bild av CoolVid-Shows från Pixabay  -->
+                        <img src="./images/uranus-2.jpg" alt="">
+                        </div>
+                        <div class="blog-slider__content">
+                        <span class="blog-slider__code">The Bull's Eye Planet</span>
+                        <div class="blog-slider__title">Characteristics</div>
+                        <div class="blog-slider__text">
+                            <dl>
+                                <dt>Planet Type</dt>
+                                <dd>Ice Giant</dd>
+                            </dl>
+                            <dl>
+                                <dt>Mass</dt>
+                                <dd>8.6810×10<sup>25</sup> kg</dd>
+                            </dl>
+                            <dl>
+                                <dt>Radius</dt>
+                                <dd>25 326 km</dd>
+                            </dl>
+                            <dl>
+                                <dt>Density</dt>
+                                <dd>1 270 kg/m<sup>3</sup></dd>
+                            </dl>
+                            <dl>
+                                <dt>Surface Gravity</dt>
+                                <dd>8.69 m/s<sup>2</sup></dd>
+                            </dl>
+                            <dl>
+                                <dt>Distance from Sun</dt>
+                                <dd>2.947 billion km</dd>
+                            </dl>
+                        </div>
+                        </div>
+                    </div>
+                    </div>
+                    <div class="blog-slider__pagination"></div>
+                    <a href="#" class="closeButton">&times;</a>
+                </div>
+            </div>
+            <div id="nepInfo">
+                <div class="blog-slider">
+                    <div class="blog-slider__wrp swiper-wrapper">
+                    <div class="blog-slider__item swiper-slide">
+                        <div class="blog-slider__img">
+                        <!-- Foto av C1superstar från Pexels -->
+                        <img src="./images/neptune-1.jpg" alt="">
+                        </div>
+                        <div class="blog-slider__content">
+                        <span class="blog-slider__code">The Big Blue Planet</span>
+                        <div class="blog-slider__title">Neptune</div>
+                        <div class="blog-slider__text">
+                            Neptune is the planet with the outermost orbit. The high distance from the sun means that the temperatures at its surface 
+                            are very low: its atmosphere reaches -218 ° C. For this reason, and due to its size, it is called the "frozen giant". 
+                            It has an atmosphere of hydrogen and helium. 13 satellites rotate around the planet, the best known of which is Triton. 
+                            Together with Uranus these planets were not visible to the naked eye, so they were only recently discovered but their 
+                            names were still attributed to the Roman gods like all the others, in this case that of the sea.
+                        </div>
+                        </div>
+                    </div>
+                    <div class="blog-slider__item swiper-slide">
+                        <div class="blog-slider__img">
+                        <!-- BIld av WikiImages från Pixabay  -->
+                        <img src="./images/neptune-2.jpg" alt="">
+                        </div>
+                        <div class="blog-slider__content">
+                        <span class="blog-slider__code">The Big Blue Planet</span>
+                        <div class="blog-slider__title">Characteristics</div>
+                        <div class="blog-slider__text">
+                            <dl>
+                                <dt>Planet Type</dt>
+                                <dd>Ice Giant</dd>
+                            </dl>
+                            <dl>
+                                <dt>Mass</dt>
+                                <dd>1.02413×10<sup>26</sup> kg</dd>
+                            </dl>
+                            <dl>
+                                <dt>Radius</dt>
+                                <dd>24 622 km</dd>
+                            </dl>
+                            <dl>
+                                <dt>Density</dt>
+                                <dd>1 638 kg/m<sup>3</sup></dd>
+                            </dl>
+                            <dl>
+                                <dt>Surface Gravity</dt>
+                                <dd>11.15 m/s<sup>2</sup></dd>
+                            </dl>
+                            <dl>
+                                <dt>Distance from Sun</dt>
+                                <dd>4.474 billion km</dd>
+                            </dl>
+                        </div>
+                        </div>
+                    </div>
+                    </div>
+                    <div class="blog-slider__pagination"></div>
+                    <a href="#" class="closeButton">&times;</a>
+                </div>
+            </div>
+            <footer>
+                <p class="copyright">Pelle Corp © 2022</p>
+            </footer>
+        </div>
+        <!-- <script type="module" src="js/preload.js"></script> -->
+        <script type="module" src="js/main.js"></script>
+    </body>
 </html>
