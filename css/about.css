@@ -11,6 +11,7 @@ body{
     /*background-image: url("../images/background.jpg");
     background-size: cover;
     backdrop-filter: blur(.4em);
+    -webkit-backdrop-filter: blur(.4em);
     background-repeat: no-repeat; */
     font-family: Montserrat;
     position: relative;
@@ -69,7 +70,6 @@ nav > ul a{
     height: 3px;
     width: 100%;
     background-color: white;
-    background-attachment: 10px;
 }
 
 #hamburger{
@@ -83,6 +83,10 @@ nav > ul a{
     font-size: 2rem;
     color: white;
     height: fit-content;
+}
+
+#hamburger:focus{
+    border: none;
 }
 
 /* Container */
@@ -142,6 +146,7 @@ footer p {
         padding: min(30vh, 10rem) 0;
         background-color: rgba(255, 255, 255, 0.2);
         backdrop-filter: blur(1rem);
+        -webkit-backdrop-filter: blur(1rem);
     }
 
     nav ul.show{
